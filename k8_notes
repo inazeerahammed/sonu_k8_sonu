@@ -16,7 +16,15 @@ Minikube installation on Linux Box:
         reboot or switch back to user.
 
 KUBERENETES WORKS:-
-    
+Def of POD:
+    A Kubernetes pod is a group of containers that are deployed together on the same host(Node).
+    commands:
+        kubectl config current-context
+        kubectl get ns (To list namespace's)   
+        kubectl config set-context --current --namespace=working
+    To view the using namespace which you are working on.
+        kubectl config view --minify | grep namespace
+    To create and list and deploy containers and instance 
 Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
 
     kubectl run nginx --image=nginx  --dry-run=client -o yaml
