@@ -1,4 +1,22 @@
+Minikube installation on Linux Box:
+    Download the Minikube using curl or wget from official links 
+        chmod +x minikube
+        mv ./minikube /usr/local/bin/minikube
+    As we are using the docker driver to run the k8's on centos
+    Start the minikube with docker driver 
+        minikube start --driver=docker
+            If you get any premission error, add the current user to docker.
+            It will download the preloaded-images-k8s.     
+    Create a user to use Minikube, as Minikube doesn't works with root.
+        #adduser naz
+        #passwd naz
+        #su - naz
+        #sudo groupadd docker
+        #sudo usermod -aG docker $USER 
+        reboot or switch back to user.
+
+KUBERENETES WORKS:-
+    
 Generate POD Manifest YAML file (-o yaml). Don't create it(--dry-run)
 
     kubectl run nginx --image=nginx  --dry-run=client -o yaml
-
