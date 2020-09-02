@@ -1,0 +1,19 @@
+e
+r 'vmx|svm' /proc/cpuinfo
+  901  curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
+  902  ll
+  903  mkdir kubernetes_work
+  904  cd kubernetes_work/
+  905  curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64   && chmod +x minikube
+  906  ll
+  907  cd mi
+  908  sudo mkdir -p /usr/local/bin/
+  909  cd
+  910  cd kubernetes_work/
+  911  ll
+  912  sudo install minikube /usr/local/bin/
+  913  minikube start
+  914  minikube start --driver=docker
+  915  docker --version
+  916  sudo minikube start --driver=docker
+
