@@ -19,7 +19,11 @@ Minikube installation on Linux Box:
 KUBERENETES WORKS:-
 Def of POD:
     A Kubernetes pod is a group of containers that are deployed together on the same host(Node).
-    commands:
+If kubectl is not working, please do the below commands:
+	echo 'export PATH=$PATH:/snap/bin' >> ~/.bashrc
+	source ~/.bashrc
+	source ~/.bashrc
+	commands:
         kubectl config current-context
         kubectl get ns (To list namespace's)   
         kubectl config set-context --current --namespace=working
